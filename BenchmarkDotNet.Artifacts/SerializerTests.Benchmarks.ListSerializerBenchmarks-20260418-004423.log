@@ -1,0 +1,279 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 3 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore --nodeReuse:false /p:UseSharedCompilation=false /p:Deterministic=true /p:Optimize=true /p:ArtifactsPath="/mnt/c/Users/BathDuck/source/repos/SaberInteractiveTest/BenchmarkRunner/bin/Release/net8.0/BenchmarkRunner-Job-YFEFPZ-1/" /p:OutDir="/mnt/c/Users/BathDuck/source/repos/SaberInteractiveTest/BenchmarkRunner/bin/Release/net8.0/BenchmarkRunner-Job-YFEFPZ-1/bin/Release/net8.0/" /p:OutputPath="/mnt/c/Users/BathDuck/source/repos/SaberInteractiveTest/BenchmarkRunner/bin/Release/net8.0/BenchmarkRunner-Job-YFEFPZ-1/bin/Release/net8.0/" /p:PublishDir="/mnt/c/Users/BathDuck/source/repos/SaberInteractiveTest/BenchmarkRunner/bin/Release/net8.0/BenchmarkRunner-Job-YFEFPZ-1/publish/" in /mnt/c/Users/BathDuck/source/repos/SaberInteractiveTest/BenchmarkRunner/bin/Release/net8.0/BenchmarkRunner-Job-YFEFPZ-1
+// command took 2.6 sec and exited with 0
+// start dotnet  build -c Release --no-restore --nodeReuse:false /p:UseSharedCompilation=false /p:Deterministic=true /p:Optimize=true /p:ArtifactsPath="/mnt/c/Users/BathDuck/source/repos/SaberInteractiveTest/BenchmarkRunner/bin/Release/net8.0/BenchmarkRunner-Job-YFEFPZ-1/" /p:OutDir="/mnt/c/Users/BathDuck/source/repos/SaberInteractiveTest/BenchmarkRunner/bin/Release/net8.0/BenchmarkRunner-Job-YFEFPZ-1/bin/Release/net8.0/" /p:OutputPath="/mnt/c/Users/BathDuck/source/repos/SaberInteractiveTest/BenchmarkRunner/bin/Release/net8.0/BenchmarkRunner-Job-YFEFPZ-1/bin/Release/net8.0/" /p:PublishDir="/mnt/c/Users/BathDuck/source/repos/SaberInteractiveTest/BenchmarkRunner/bin/Release/net8.0/BenchmarkRunner-Job-YFEFPZ-1/publish/" --output "/mnt/c/Users/BathDuck/source/repos/SaberInteractiveTest/BenchmarkRunner/bin/Release/net8.0/BenchmarkRunner-Job-YFEFPZ-1/bin/Release/net8.0/" in /mnt/c/Users/BathDuck/source/repos/SaberInteractiveTest/BenchmarkRunner/bin/Release/net8.0/BenchmarkRunner-Job-YFEFPZ-1
+// command took 12.52 sec and exited with 0
+// ***** Done, took 00:00:15 (15.59 sec)   *****
+// Found 3 benchmarks:
+//   ListSerializerBenchmarks.Serialize: Job-YFEFPZ(IterationCount=10, WarmupCount=3) [ListSize=1000000, SerializerType=IvanImplementation]
+//   ListSerializerBenchmarks.Deserialize: Job-YFEFPZ(IterationCount=10, WarmupCount=3) [ListSize=1000000, SerializerType=IvanImplementation]
+//   ListSerializerBenchmarks.DeepCopy: Job-YFEFPZ(IterationCount=10, WarmupCount=3) [ListSize=1000000, SerializerType=IvanImplementation]
+
+// **************************
+// Benchmark: ListSerializerBenchmarks.Serialize: Job-YFEFPZ(IterationCount=10, WarmupCount=3) [ListSize=1000000, SerializerType=IvanImplementation]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet BenchmarkRunner-Job-YFEFPZ-1.dll --anonymousPipes 117 118 --benchmarkName "SerializerTests.Benchmarks.ListSerializerBenchmarks.Serialize(ListSize: 1000000, SerializerType: typeof(SerializerTests.Implementations.IvanImplementation))" --job "IterationCount=10, WarmupCount=3" --benchmarkId 0 in /mnt/c/Users/BathDuck/source/repos/SaberInteractiveTest/BenchmarkRunner/bin/Release/net8.0/BenchmarkRunner-Job-YFEFPZ-1/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 8.0.26 (8.0.26, 8.0.2626.16921), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL VectorSize=256
+// Job: Job-YFEFPZ(IterationCount=10, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 271447.00 ns, 271.4470 us/op
+WorkloadJitting  1: 1 op, 437927751.00 ns, 437.9278 ms/op
+
+OverheadJitting  2: 1 op, 2044.00 ns, 2.0440 us/op
+WorkloadJitting  2: 1 op, 441971147.00 ns, 441.9711 ms/op
+
+WorkloadWarmup   1: 1 op, 414934660.00 ns, 414.9347 ms/op
+WorkloadWarmup   2: 1 op, 427337967.00 ns, 427.3380 ms/op
+WorkloadWarmup   3: 1 op, 410837267.00 ns, 410.8373 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 409896799.00 ns, 409.8968 ms/op
+WorkloadActual   2: 1 op, 417211749.00 ns, 417.2117 ms/op
+WorkloadActual   3: 1 op, 411305342.00 ns, 411.3053 ms/op
+WorkloadActual   4: 1 op, 432562477.00 ns, 432.5625 ms/op
+WorkloadActual   5: 1 op, 403273799.00 ns, 403.2738 ms/op
+WorkloadActual   6: 1 op, 411335813.00 ns, 411.3358 ms/op
+WorkloadActual   7: 1 op, 407368269.00 ns, 407.3683 ms/op
+WorkloadActual   8: 1 op, 411422022.00 ns, 411.4220 ms/op
+WorkloadActual   9: 1 op, 409568018.00 ns, 409.5680 ms/op
+WorkloadActual  10: 1 op, 409179391.00 ns, 409.1794 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 409896799.00 ns, 409.8968 ms/op
+WorkloadResult   2: 1 op, 411305342.00 ns, 411.3053 ms/op
+WorkloadResult   3: 1 op, 403273799.00 ns, 403.2738 ms/op
+WorkloadResult   4: 1 op, 411335813.00 ns, 411.3358 ms/op
+WorkloadResult   5: 1 op, 407368269.00 ns, 407.3683 ms/op
+WorkloadResult   6: 1 op, 411422022.00 ns, 411.4220 ms/op
+WorkloadResult   7: 1 op, 409568018.00 ns, 409.5680 ms/op
+WorkloadResult   8: 1 op, 409179391.00 ns, 409.1794 ms/op
+// GC:  0 0 0 66110128 1
+// Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 9075 has exited with code 0.
+
+Mean = 409.169 ms, StdErr = 0.973 ms (0.24%), N = 8, StdDev = 2.752 ms
+Min = 403.274 ms, Q1 = 408.727 ms, Median = 409.732 ms, Q3 = 411.313 ms, Max = 411.422 ms
+IQR = 2.586 ms, LowerFence = 404.847 ms, UpperFence = 415.192 ms
+ConfidenceInterval = [403.907 ms; 414.431 ms] (CI 99.9%), Margin = 5.262 ms (1.29% of Mean)
+Skewness = -1.07, Kurtosis = 2.8, MValue = 2
+
+// ** Remained 2 (66.7 %) benchmark(s) to run. Estimated finish 2026-04-18 0:45 (0h 0m from now) **
+// **************************
+// Benchmark: ListSerializerBenchmarks.Deserialize: Job-YFEFPZ(IterationCount=10, WarmupCount=3) [ListSize=1000000, SerializerType=IvanImplementation]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet BenchmarkRunner-Job-YFEFPZ-1.dll --anonymousPipes 119 120 --benchmarkName "SerializerTests.Benchmarks.ListSerializerBenchmarks.Deserialize(ListSize: 1000000, SerializerType: typeof(SerializerTests.Implementations.IvanImplementation))" --job "IterationCount=10, WarmupCount=3" --benchmarkId 1 in /mnt/c/Users/BathDuck/source/repos/SaberInteractiveTest/BenchmarkRunner/bin/Release/net8.0/BenchmarkRunner-Job-YFEFPZ-1/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 8.0.26 (8.0.26, 8.0.2626.16921), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL VectorSize=256
+// Job: Job-YFEFPZ(IterationCount=10, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 292366.00 ns, 292.3660 us/op
+WorkloadJitting  1: 1 op, 664201181.00 ns, 664.2012 ms/op
+
+OverheadJitting  2: 1 op, 2024.00 ns, 2.0240 us/op
+WorkloadJitting  2: 1 op, 342269012.00 ns, 342.2690 ms/op
+
+WorkloadWarmup   1: 1 op, 332764664.00 ns, 332.7647 ms/op
+WorkloadWarmup   2: 1 op, 334859445.00 ns, 334.8594 ms/op
+WorkloadWarmup   3: 1 op, 331940621.00 ns, 331.9406 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 332516471.00 ns, 332.5165 ms/op
+WorkloadActual   2: 1 op, 336766288.00 ns, 336.7663 ms/op
+WorkloadActual   3: 1 op, 328926439.00 ns, 328.9264 ms/op
+WorkloadActual   4: 1 op, 331641014.00 ns, 331.6410 ms/op
+WorkloadActual   5: 1 op, 328844144.00 ns, 328.8441 ms/op
+WorkloadActual   6: 1 op, 331197564.00 ns, 331.1976 ms/op
+WorkloadActual   7: 1 op, 351518534.00 ns, 351.5185 ms/op
+WorkloadActual   8: 1 op, 333953070.00 ns, 333.9531 ms/op
+WorkloadActual   9: 1 op, 339292359.00 ns, 339.2924 ms/op
+WorkloadActual  10: 1 op, 339768218.00 ns, 339.7682 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 332516471.00 ns, 332.5165 ms/op
+WorkloadResult   2: 1 op, 336766288.00 ns, 336.7663 ms/op
+WorkloadResult   3: 1 op, 328926439.00 ns, 328.9264 ms/op
+WorkloadResult   4: 1 op, 331641014.00 ns, 331.6410 ms/op
+WorkloadResult   5: 1 op, 328844144.00 ns, 328.8441 ms/op
+WorkloadResult   6: 1 op, 331197564.00 ns, 331.1976 ms/op
+WorkloadResult   7: 1 op, 333953070.00 ns, 333.9531 ms/op
+WorkloadResult   8: 1 op, 339292359.00 ns, 339.2924 ms/op
+WorkloadResult   9: 1 op, 339768218.00 ns, 339.7682 ms/op
+// GC:  15 7 0 111979008 1
+// Threading:  0 0 1
+// Exceptions:  1
+
+// AfterAll
+// Benchmark Process 9091 has exited with code 0.
+
+Mean = 333.656 ms, StdErr = 1.373 ms (0.41%), N = 9, StdDev = 4.120 ms
+Min = 328.844 ms, Q1 = 331.198 ms, Median = 332.516 ms, Q3 = 336.766 ms, Max = 339.768 ms
+IQR = 5.569 ms, LowerFence = 322.844 ms, UpperFence = 345.119 ms
+ConfidenceInterval = [326.732 ms; 340.580 ms] (CI 99.9%), Margin = 6.924 ms (2.08% of Mean)
+Skewness = 0.31, Kurtosis = 1.38, MValue = 2
+
+// ** Remained 1 (33.3 %) benchmark(s) to run. Estimated finish 2026-04-18 0:45 (0h 0m from now) **
+// **************************
+// Benchmark: ListSerializerBenchmarks.DeepCopy: Job-YFEFPZ(IterationCount=10, WarmupCount=3) [ListSize=1000000, SerializerType=IvanImplementation]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet BenchmarkRunner-Job-YFEFPZ-1.dll --anonymousPipes 119 120 --benchmarkName "SerializerTests.Benchmarks.ListSerializerBenchmarks.DeepCopy(ListSize: 1000000, SerializerType: typeof(SerializerTests.Implementations.IvanImplementation))" --job "IterationCount=10, WarmupCount=3" --benchmarkId 2 in /mnt/c/Users/BathDuck/source/repos/SaberInteractiveTest/BenchmarkRunner/bin/Release/net8.0/BenchmarkRunner-Job-YFEFPZ-1/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 8.0.26 (8.0.26, 8.0.2626.16921), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL VectorSize=256
+// Job: Job-YFEFPZ(IterationCount=10, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 316792.00 ns, 316.7920 us/op
+WorkloadJitting  1: 1 op, 232069293.00 ns, 232.0693 ms/op
+
+WorkloadPilot    1: 2 op, 465813181.00 ns, 232.9066 ms/op
+WorkloadPilot    2: 3 op, 869042276.00 ns, 289.6808 ms/op
+
+WorkloadWarmup   1: 3 op, 853144648.00 ns, 284.3815 ms/op
+WorkloadWarmup   2: 3 op, 834166027.00 ns, 278.0553 ms/op
+WorkloadWarmup   3: 3 op, 855121069.00 ns, 285.0404 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 3 op, 866150811.00 ns, 288.7169 ms/op
+WorkloadActual   2: 3 op, 840799025.00 ns, 280.2663 ms/op
+WorkloadActual   3: 3 op, 868852363.00 ns, 289.6175 ms/op
+WorkloadActual   4: 3 op, 861026486.00 ns, 287.0088 ms/op
+WorkloadActual   5: 3 op, 855842785.00 ns, 285.2809 ms/op
+WorkloadActual   6: 3 op, 857726288.00 ns, 285.9088 ms/op
+WorkloadActual   7: 3 op, 879655371.00 ns, 293.2185 ms/op
+WorkloadActual   8: 3 op, 873148405.00 ns, 291.0495 ms/op
+WorkloadActual   9: 3 op, 856863268.00 ns, 285.6211 ms/op
+WorkloadActual  10: 3 op, 878892045.00 ns, 292.9640 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 3 op, 866150811.00 ns, 288.7169 ms/op
+WorkloadResult   2: 3 op, 840799025.00 ns, 280.2663 ms/op
+WorkloadResult   3: 3 op, 868852363.00 ns, 289.6175 ms/op
+WorkloadResult   4: 3 op, 861026486.00 ns, 287.0088 ms/op
+WorkloadResult   5: 3 op, 855842785.00 ns, 285.2809 ms/op
+WorkloadResult   6: 3 op, 857726288.00 ns, 285.9088 ms/op
+WorkloadResult   7: 3 op, 879655371.00 ns, 293.2185 ms/op
+WorkloadResult   8: 3 op, 873148405.00 ns, 291.0495 ms/op
+WorkloadResult   9: 3 op, 856863268.00 ns, 285.6211 ms/op
+WorkloadResult  10: 3 op, 878892045.00 ns, 292.9640 ms/op
+// GC:  23 12 1 144000792 3
+// Threading:  0 0 3
+
+// AfterAll
+// Benchmark Process 9102 has exited with code 0.
+
+Mean = 287.965 ms, StdErr = 1.258 ms (0.44%), N = 10, StdDev = 3.979 ms
+Min = 280.266 ms, Q1 = 285.693 ms, Median = 287.863 ms, Q3 = 290.691 ms, Max = 293.218 ms
+IQR = 4.998 ms, LowerFence = 278.195 ms, UpperFence = 298.189 ms
+ConfidenceInterval = [281.949 ms; 293.981 ms] (CI 99.9%), Margin = 6.016 ms (2.09% of Mean)
+Skewness = -0.31, Kurtosis = 2.03, MValue = 2
+
+// ** Remained 0 (0.0 %) benchmark(s) to run. Estimated finish 2026-04-18 0:45 (0h 0m from now) **
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts/results/SerializerTests.Benchmarks.ListSerializerBenchmarks-report.csv
+  BenchmarkDotNet.Artifacts/results/SerializerTests.Benchmarks.ListSerializerBenchmarks-report-github.md
+  BenchmarkDotNet.Artifacts/results/SerializerTests.Benchmarks.ListSerializerBenchmarks-report.html
+
+// * Detailed results *
+ListSerializerBenchmarks.Serialize: Job-YFEFPZ(IterationCount=10, WarmupCount=3) [ListSize=1000000, SerializerType=IvanImplementation]
+Runtime = .NET 8.0.26 (8.0.26, 8.0.2626.16921), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 409.169 ms, StdErr = 0.973 ms (0.24%), N = 8, StdDev = 2.752 ms
+Min = 403.274 ms, Q1 = 408.727 ms, Median = 409.732 ms, Q3 = 411.313 ms, Max = 411.422 ms
+IQR = 2.586 ms, LowerFence = 404.847 ms, UpperFence = 415.192 ms
+ConfidenceInterval = [403.907 ms; 414.431 ms] (CI 99.9%), Margin = 5.262 ms (1.29% of Mean)
+Skewness = -1.07, Kurtosis = 2.8, MValue = 2
+-------------------- Histogram --------------------
+[401.468 ms ; 413.228 ms) | @@@@@@@@
+---------------------------------------------------
+
+ListSerializerBenchmarks.Deserialize: Job-YFEFPZ(IterationCount=10, WarmupCount=3) [ListSize=1000000, SerializerType=IvanImplementation]
+Runtime = .NET 8.0.26 (8.0.26, 8.0.2626.16921), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 333.656 ms, StdErr = 1.373 ms (0.41%), N = 9, StdDev = 4.120 ms
+Min = 328.844 ms, Q1 = 331.198 ms, Median = 332.516 ms, Q3 = 336.766 ms, Max = 339.768 ms
+IQR = 5.569 ms, LowerFence = 322.844 ms, UpperFence = 345.119 ms
+ConfidenceInterval = [326.732 ms; 340.580 ms] (CI 99.9%), Margin = 6.924 ms (2.08% of Mean)
+Skewness = 0.31, Kurtosis = 1.38, MValue = 2
+-------------------- Histogram --------------------
+[328.085 ms ; 341.650 ms) | @@@@@@@@@
+---------------------------------------------------
+
+ListSerializerBenchmarks.DeepCopy: Job-YFEFPZ(IterationCount=10, WarmupCount=3) [ListSize=1000000, SerializerType=IvanImplementation]
+Runtime = .NET 8.0.26 (8.0.26, 8.0.2626.16921), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 287.965 ms, StdErr = 1.258 ms (0.44%), N = 10, StdDev = 3.979 ms
+Min = 280.266 ms, Q1 = 285.693 ms, Median = 287.863 ms, Q3 = 290.691 ms, Max = 293.218 ms
+IQR = 4.998 ms, LowerFence = 278.195 ms, UpperFence = 298.189 ms
+ConfidenceInterval = [281.949 ms; 293.981 ms] (CI 99.9%), Margin = 6.016 ms (2.09% of Mean)
+Skewness = -0.31, Kurtosis = 2.03, MValue = 2
+-------------------- Histogram --------------------
+[277.842 ms ; 284.575 ms) | @
+[284.575 ms ; 295.643 ms) | @@@@@@@@@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet v0.15.8, Linux Ubuntu 24.04.4 LTS (Noble Numbat)
+AMD Ryzen 7 2700 3.19GHz, 1 CPU, 16 logical and 8 physical cores
+.NET SDK 8.0.126
+  [Host]     : .NET 8.0.26 (8.0.26, 8.0.2626.16921), X64 RyuJIT x86-64-v3
+  Job-YFEFPZ : .NET 8.0.26 (8.0.26, 8.0.2626.16921), X64 RyuJIT x86-64-v3
+
+IterationCount=10  WarmupCount=3  
+
+| Method      | ListSize | SerializerType     | Mean     | Error   | StdDev  | Gen0       | Gen1      | Gen2     | Allocated |
+|------------ |--------- |------------------- |---------:|--------:|--------:|-----------:|----------:|---------:|----------:|
+| Serialize   | 1000000  | IvanImplementation | 409.2 ms | 5.26 ms | 2.75 ms |          - |         - |        - |  63.05 MB |
+| Deserialize | 1000000  | IvanImplementation | 333.7 ms | 6.92 ms | 4.12 ms | 15000.0000 | 7000.0000 |        - | 106.79 MB |
+| DeepCopy    | 1000000  | IvanImplementation | 288.0 ms | 6.02 ms | 3.98 ms |  7666.6667 | 4000.0000 | 333.3333 |  45.78 MB |
+
+// * Hints *
+Outliers
+  ListSerializerBenchmarks.Serialize: IterationCount=10, WarmupCount=3   -> 2 outliers were removed, 3 outliers were detected (403.27 ms, 417.21 ms, 432.56 ms)
+  ListSerializerBenchmarks.Deserialize: IterationCount=10, WarmupCount=3 -> 1 outlier  was  removed (351.52 ms)
+
+// * Legends *
+  ListSize       : Value of the 'ListSize' parameter
+  SerializerType : Value of the 'SerializerType' parameter
+  Mean           : Arithmetic mean of all measurements
+  Error          : Half of 99.9% confidence interval
+  StdDev         : Standard deviation of all measurements
+  Gen0           : GC Generation 0 collects per 1000 operations
+  Gen1           : GC Generation 1 collects per 1000 operations
+  Gen2           : GC Generation 2 collects per 1000 operations
+  Allocated      : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+  1 ms           : 1 Millisecond (0.001 sec)
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:00:50 (50.68 sec), executed benchmarks: 3
+
+Global total time: 00:01:06 (66.52 sec), executed benchmarks: 3
+// * Artifacts cleanup *
+Artifacts cleanup is finished

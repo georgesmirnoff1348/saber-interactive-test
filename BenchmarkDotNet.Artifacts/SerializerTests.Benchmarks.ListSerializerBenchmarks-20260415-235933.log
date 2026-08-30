@@ -1,0 +1,391 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 3 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore --nodeReuse:false /p:UseSharedCompilation=false /p:Deterministic=true /p:Optimize=true /p:ArtifactsPath="/mnt/c/Users/BathDuck/source/repos/SaberInteractiveTest/BenchmarkRunner/bin/Release/net8.0/BenchmarkRunner-Job-YFEFPZ-1/" /p:OutDir="/mnt/c/Users/BathDuck/source/repos/SaberInteractiveTest/BenchmarkRunner/bin/Release/net8.0/BenchmarkRunner-Job-YFEFPZ-1/bin/Release/net8.0/" /p:OutputPath="/mnt/c/Users/BathDuck/source/repos/SaberInteractiveTest/BenchmarkRunner/bin/Release/net8.0/BenchmarkRunner-Job-YFEFPZ-1/bin/Release/net8.0/" /p:PublishDir="/mnt/c/Users/BathDuck/source/repos/SaberInteractiveTest/BenchmarkRunner/bin/Release/net8.0/BenchmarkRunner-Job-YFEFPZ-1/publish/" in /mnt/c/Users/BathDuck/source/repos/SaberInteractiveTest/BenchmarkRunner/bin/Release/net8.0/BenchmarkRunner-Job-YFEFPZ-1
+// command took 2.51 sec and exited with 0
+// start dotnet  build -c Release --no-restore --nodeReuse:false /p:UseSharedCompilation=false /p:Deterministic=true /p:Optimize=true /p:ArtifactsPath="/mnt/c/Users/BathDuck/source/repos/SaberInteractiveTest/BenchmarkRunner/bin/Release/net8.0/BenchmarkRunner-Job-YFEFPZ-1/" /p:OutDir="/mnt/c/Users/BathDuck/source/repos/SaberInteractiveTest/BenchmarkRunner/bin/Release/net8.0/BenchmarkRunner-Job-YFEFPZ-1/bin/Release/net8.0/" /p:OutputPath="/mnt/c/Users/BathDuck/source/repos/SaberInteractiveTest/BenchmarkRunner/bin/Release/net8.0/BenchmarkRunner-Job-YFEFPZ-1/bin/Release/net8.0/" /p:PublishDir="/mnt/c/Users/BathDuck/source/repos/SaberInteractiveTest/BenchmarkRunner/bin/Release/net8.0/BenchmarkRunner-Job-YFEFPZ-1/publish/" --output "/mnt/c/Users/BathDuck/source/repos/SaberInteractiveTest/BenchmarkRunner/bin/Release/net8.0/BenchmarkRunner-Job-YFEFPZ-1/bin/Release/net8.0/" in /mnt/c/Users/BathDuck/source/repos/SaberInteractiveTest/BenchmarkRunner/bin/Release/net8.0/BenchmarkRunner-Job-YFEFPZ-1
+// command took 12.52 sec and exited with 0
+// ***** Done, took 00:00:15 (15.43 sec)   *****
+// Found 3 benchmarks:
+//   ListSerializerBenchmarks.Serialize: Job-YFEFPZ(IterationCount=10, WarmupCount=3) [ListSize=10000, SerializerType=IvanImplementation]
+//   ListSerializerBenchmarks.Deserialize: Job-YFEFPZ(IterationCount=10, WarmupCount=3) [ListSize=10000, SerializerType=IvanImplementation]
+//   ListSerializerBenchmarks.DeepCopy: Job-YFEFPZ(IterationCount=10, WarmupCount=3) [ListSize=10000, SerializerType=IvanImplementation]
+
+// **************************
+// Benchmark: ListSerializerBenchmarks.Serialize: Job-YFEFPZ(IterationCount=10, WarmupCount=3) [ListSize=10000, SerializerType=IvanImplementation]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet BenchmarkRunner-Job-YFEFPZ-1.dll --anonymousPipes 117 118 --benchmarkName "SerializerTests.Benchmarks.ListSerializerBenchmarks.Serialize(ListSize: 10000, SerializerType: typeof(SerializerTests.Implementations.IvanImplementation))" --job "IterationCount=10, WarmupCount=3" --benchmarkId 0 in /mnt/c/Users/BathDuck/source/repos/SaberInteractiveTest/BenchmarkRunner/bin/Release/net8.0/BenchmarkRunner-Job-YFEFPZ-1/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 8.0.25 (8.0.25, 8.0.2526.11203), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL VectorSize=256
+// Job: Job-YFEFPZ(IterationCount=10, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 271419.00 ns, 271.4190 us/op
+WorkloadJitting  1: 1 op, 3342394.00 ns, 3.3424 ms/op
+
+OverheadJitting  2: 16 op, 964217.00 ns, 60.2636 us/op
+WorkloadJitting  2: 16 op, 30135244.00 ns, 1.8835 ms/op
+
+WorkloadPilot    1: 16 op, 29363146.00 ns, 1.8352 ms/op
+WorkloadPilot    2: 32 op, 58760026.00 ns, 1.8363 ms/op
+WorkloadPilot    3: 64 op, 110560681.00 ns, 1.7275 ms/op
+WorkloadPilot    4: 128 op, 220426470.00 ns, 1.7221 ms/op
+WorkloadPilot    5: 256 op, 370314053.00 ns, 1.4465 ms/op
+WorkloadPilot    6: 512 op, 746296162.00 ns, 1.4576 ms/op
+
+OverheadWarmup   1: 512 op, 4829.00 ns, 9.4316 ns/op
+OverheadWarmup   2: 512 op, 3016.00 ns, 5.8906 ns/op
+OverheadWarmup   3: 512 op, 2976.00 ns, 5.8125 ns/op
+OverheadWarmup   4: 512 op, 2966.00 ns, 5.7930 ns/op
+OverheadWarmup   5: 512 op, 3096.00 ns, 6.0469 ns/op
+OverheadWarmup   6: 512 op, 3015.00 ns, 5.8887 ns/op
+OverheadWarmup   7: 512 op, 2965.00 ns, 5.7910 ns/op
+OverheadWarmup   8: 512 op, 3015.00 ns, 5.8887 ns/op
+OverheadWarmup   9: 512 op, 3096.00 ns, 6.0469 ns/op
+OverheadWarmup  10: 512 op, 2976.00 ns, 5.8125 ns/op
+
+OverheadActual   1: 512 op, 3065.00 ns, 5.9863 ns/op
+OverheadActual   2: 512 op, 3327.00 ns, 6.4980 ns/op
+OverheadActual   3: 512 op, 3437.00 ns, 6.7129 ns/op
+OverheadActual   4: 512 op, 2985.00 ns, 5.8301 ns/op
+OverheadActual   5: 512 op, 3035.00 ns, 5.9277 ns/op
+OverheadActual   6: 512 op, 5590.00 ns, 10.9180 ns/op
+OverheadActual   7: 512 op, 2895.00 ns, 5.6543 ns/op
+OverheadActual   8: 512 op, 2905.00 ns, 5.6738 ns/op
+OverheadActual   9: 512 op, 2886.00 ns, 5.6367 ns/op
+OverheadActual  10: 512 op, 2995.00 ns, 5.8496 ns/op
+OverheadActual  11: 512 op, 2996.00 ns, 5.8516 ns/op
+OverheadActual  12: 512 op, 3286.00 ns, 6.4180 ns/op
+OverheadActual  13: 512 op, 3296.00 ns, 6.4375 ns/op
+OverheadActual  14: 512 op, 3516.00 ns, 6.8672 ns/op
+OverheadActual  15: 512 op, 3206.00 ns, 6.2617 ns/op
+OverheadActual  16: 512 op, 3597.00 ns, 7.0254 ns/op
+OverheadActual  17: 512 op, 3296.00 ns, 6.4375 ns/op
+OverheadActual  18: 512 op, 3496.00 ns, 6.8281 ns/op
+OverheadActual  19: 512 op, 3447.00 ns, 6.7324 ns/op
+OverheadActual  20: 512 op, 3216.00 ns, 6.2813 ns/op
+
+WorkloadWarmup   1: 512 op, 768162008.00 ns, 1.5003 ms/op
+WorkloadWarmup   2: 512 op, 741576841.00 ns, 1.4484 ms/op
+WorkloadWarmup   3: 512 op, 734739929.00 ns, 1.4350 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 512 op, 739889935.00 ns, 1.4451 ms/op
+WorkloadActual   2: 512 op, 766248481.00 ns, 1.4966 ms/op
+WorkloadActual   3: 512 op, 750189422.00 ns, 1.4652 ms/op
+WorkloadActual   4: 512 op, 739079487.00 ns, 1.4435 ms/op
+WorkloadActual   5: 512 op, 742615078.00 ns, 1.4504 ms/op
+WorkloadActual   6: 512 op, 734316310.00 ns, 1.4342 ms/op
+WorkloadActual   7: 512 op, 730885757.00 ns, 1.4275 ms/op
+WorkloadActual   8: 512 op, 734870825.00 ns, 1.4353 ms/op
+WorkloadActual   9: 512 op, 746524417.00 ns, 1.4581 ms/op
+WorkloadActual  10: 512 op, 751748397.00 ns, 1.4683 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 512 op, 739886684.00 ns, 1.4451 ms/op
+WorkloadResult   2: 512 op, 766245230.00 ns, 1.4966 ms/op
+WorkloadResult   3: 512 op, 750186171.00 ns, 1.4652 ms/op
+WorkloadResult   4: 512 op, 739076236.00 ns, 1.4435 ms/op
+WorkloadResult   5: 512 op, 742611827.00 ns, 1.4504 ms/op
+WorkloadResult   6: 512 op, 734313059.00 ns, 1.4342 ms/op
+WorkloadResult   7: 512 op, 730882506.00 ns, 1.4275 ms/op
+WorkloadResult   8: 512 op, 734867574.00 ns, 1.4353 ms/op
+WorkloadResult   9: 512 op, 746521166.00 ns, 1.4580 ms/op
+WorkloadResult  10: 512 op, 751745146.00 ns, 1.4683 ms/op
+// GC:  128 128 128 616650752 512
+// Threading:  0 0 512
+
+// AfterAll
+// Benchmark Process 1559 has exited with code 0.
+
+Mean = 1.452 ms, StdErr = 0.006 ms (0.45%), N = 10, StdDev = 0.020 ms
+Min = 1.428 ms, Q1 = 1.437 ms, Median = 1.448 ms, Q3 = 1.463 ms, Max = 1.497 ms
+IQR = 0.026 ms, LowerFence = 1.398 ms, UpperFence = 1.503 ms
+ConfidenceInterval = [1.421 ms; 1.483 ms] (CI 99.9%), Margin = 0.031 ms (2.13% of Mean)
+Skewness = 0.75, Kurtosis = 2.54, MValue = 2
+
+// ** Remained 2 (66.7 %) benchmark(s) to run. Estimated finish 2026-04-16 0:00 (0h 0m from now) **
+// **************************
+// Benchmark: ListSerializerBenchmarks.Deserialize: Job-YFEFPZ(IterationCount=10, WarmupCount=3) [ListSize=10000, SerializerType=IvanImplementation]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet BenchmarkRunner-Job-YFEFPZ-1.dll --anonymousPipes 119 120 --benchmarkName "SerializerTests.Benchmarks.ListSerializerBenchmarks.Deserialize(ListSize: 10000, SerializerType: typeof(SerializerTests.Implementations.IvanImplementation))" --job "IterationCount=10, WarmupCount=3" --benchmarkId 1 in /mnt/c/Users/BathDuck/source/repos/SaberInteractiveTest/BenchmarkRunner/bin/Release/net8.0/BenchmarkRunner-Job-YFEFPZ-1/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 8.0.25 (8.0.25, 8.0.2526.11203), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL VectorSize=256
+// Job: Job-YFEFPZ(IterationCount=10, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 297868.00 ns, 297.8680 us/op
+WorkloadJitting  1: 1 op, 11834884.00 ns, 11.8349 ms/op
+
+OverheadJitting  2: 16 op, 910145.00 ns, 56.8841 us/op
+WorkloadJitting  2: 16 op, 42373373.00 ns, 2.6483 ms/op
+
+WorkloadPilot    1: 16 op, 37999346.00 ns, 2.3750 ms/op
+WorkloadPilot    2: 32 op, 111547328.00 ns, 3.4859 ms/op
+WorkloadPilot    3: 64 op, 210397959.00 ns, 3.2875 ms/op
+WorkloadPilot    4: 128 op, 373428537.00 ns, 2.9174 ms/op
+WorkloadPilot    5: 256 op, 662755313.00 ns, 2.5889 ms/op
+
+OverheadWarmup   1: 256 op, 3687.00 ns, 14.4023 ns/op
+OverheadWarmup   2: 256 op, 2405.00 ns, 9.3945 ns/op
+OverheadWarmup   3: 256 op, 1863.00 ns, 7.2773 ns/op
+OverheadWarmup   4: 256 op, 1883.00 ns, 7.3555 ns/op
+OverheadWarmup   5: 256 op, 1823.00 ns, 7.1211 ns/op
+OverheadWarmup   6: 256 op, 1774.00 ns, 6.9297 ns/op
+OverheadWarmup   7: 256 op, 1934.00 ns, 7.5547 ns/op
+OverheadWarmup   8: 256 op, 2034.00 ns, 7.9453 ns/op
+OverheadWarmup   9: 256 op, 1864.00 ns, 7.2813 ns/op
+
+OverheadActual   1: 256 op, 2114.00 ns, 8.2578 ns/op
+OverheadActual   2: 256 op, 1913.00 ns, 7.4727 ns/op
+OverheadActual   3: 256 op, 2074.00 ns, 8.1016 ns/op
+OverheadActual   4: 256 op, 1804.00 ns, 7.0469 ns/op
+OverheadActual   5: 256 op, 1913.00 ns, 7.4727 ns/op
+OverheadActual   6: 256 op, 2084.00 ns, 8.1406 ns/op
+OverheadActual   7: 256 op, 1904.00 ns, 7.4375 ns/op
+OverheadActual   8: 256 op, 1904.00 ns, 7.4375 ns/op
+OverheadActual   9: 256 op, 1753.00 ns, 6.8477 ns/op
+OverheadActual  10: 256 op, 1703.00 ns, 6.6523 ns/op
+OverheadActual  11: 256 op, 1833.00 ns, 7.1602 ns/op
+OverheadActual  12: 256 op, 1723.00 ns, 6.7305 ns/op
+OverheadActual  13: 256 op, 1823.00 ns, 7.1211 ns/op
+OverheadActual  14: 256 op, 2214.00 ns, 8.6484 ns/op
+OverheadActual  15: 256 op, 1783.00 ns, 6.9648 ns/op
+OverheadActual  16: 256 op, 1883.00 ns, 7.3555 ns/op
+OverheadActual  17: 256 op, 1704.00 ns, 6.6563 ns/op
+OverheadActual  18: 256 op, 2234.00 ns, 8.7266 ns/op
+OverheadActual  19: 256 op, 2225.00 ns, 8.6914 ns/op
+OverheadActual  20: 256 op, 1753.00 ns, 6.8477 ns/op
+
+WorkloadWarmup   1: 256 op, 674630539.00 ns, 2.6353 ms/op
+WorkloadWarmup   2: 256 op, 668471138.00 ns, 2.6112 ms/op
+WorkloadWarmup   3: 256 op, 667569400.00 ns, 2.6077 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 256 op, 690615579.00 ns, 2.6977 ms/op
+WorkloadActual   2: 256 op, 631023949.00 ns, 2.4649 ms/op
+WorkloadActual   3: 256 op, 665144006.00 ns, 2.5982 ms/op
+WorkloadActual   4: 256 op, 636547499.00 ns, 2.4865 ms/op
+WorkloadActual   5: 256 op, 658212110.00 ns, 2.5711 ms/op
+WorkloadActual   6: 256 op, 680036050.00 ns, 2.6564 ms/op
+WorkloadActual   7: 256 op, 665189862.00 ns, 2.5984 ms/op
+WorkloadActual   8: 256 op, 668461511.00 ns, 2.6112 ms/op
+WorkloadActual   9: 256 op, 636332206.00 ns, 2.4857 ms/op
+WorkloadActual  10: 256 op, 666435465.00 ns, 2.6033 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 256 op, 690613685.50 ns, 2.6977 ms/op
+WorkloadResult   2: 256 op, 631022055.50 ns, 2.4649 ms/op
+WorkloadResult   3: 256 op, 665142112.50 ns, 2.5982 ms/op
+WorkloadResult   4: 256 op, 636545605.50 ns, 2.4865 ms/op
+WorkloadResult   5: 256 op, 658210216.50 ns, 2.5711 ms/op
+WorkloadResult   6: 256 op, 680034156.50 ns, 2.6564 ms/op
+WorkloadResult   7: 256 op, 665187968.50 ns, 2.5984 ms/op
+WorkloadResult   8: 256 op, 668459617.50 ns, 2.6112 ms/op
+WorkloadResult   9: 256 op, 636330312.50 ns, 2.4857 ms/op
+WorkloadResult  10: 256 op, 666433571.50 ns, 2.6033 ms/op
+// GC:  49 36 12 293019800 256
+// Threading:  0 0 256
+// Exceptions:  1
+
+// AfterAll
+// Benchmark Process 1575 has exited with code 0.
+
+Mean = 2.577 ms, StdErr = 0.024 ms (0.94%), N = 10, StdDev = 0.077 ms
+Min = 2.465 ms, Q1 = 2.508 ms, Median = 2.598 ms, Q3 = 2.609 ms, Max = 2.698 ms
+IQR = 0.102 ms, LowerFence = 2.355 ms, UpperFence = 2.761 ms
+ConfidenceInterval = [2.462 ms; 2.693 ms] (CI 99.9%), Margin = 0.116 ms (4.49% of Mean)
+Skewness = -0.14, Kurtosis = 1.6, MValue = 2
+
+// ** Remained 1 (33.3 %) benchmark(s) to run. Estimated finish 2026-04-16 0:00 (0h 0m from now) **
+// **************************
+// Benchmark: ListSerializerBenchmarks.DeepCopy: Job-YFEFPZ(IterationCount=10, WarmupCount=3) [ListSize=10000, SerializerType=IvanImplementation]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet BenchmarkRunner-Job-YFEFPZ-1.dll --anonymousPipes 119 120 --benchmarkName "SerializerTests.Benchmarks.ListSerializerBenchmarks.DeepCopy(ListSize: 10000, SerializerType: typeof(SerializerTests.Implementations.IvanImplementation))" --job "IterationCount=10, WarmupCount=3" --benchmarkId 2 in /mnt/c/Users/BathDuck/source/repos/SaberInteractiveTest/BenchmarkRunner/bin/Release/net8.0/BenchmarkRunner-Job-YFEFPZ-1/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 8.0.25 (8.0.25, 8.0.2526.11203), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL VectorSize=256
+// Job: Job-YFEFPZ(IterationCount=10, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 312426.00 ns, 312.4260 us/op
+WorkloadJitting  1: 1 op, 3086363.00 ns, 3.0864 ms/op
+
+OverheadJitting  2: 16 op, 848911.00 ns, 53.0569 us/op
+WorkloadJitting  2: 16 op, 8018666.00 ns, 501.1666 us/op
+
+WorkloadPilot    1: 16 op, 7146662.00 ns, 446.6664 us/op
+WorkloadPilot    2: 32 op, 11796896.00 ns, 368.6530 us/op
+WorkloadPilot    3: 64 op, 24917503.00 ns, 389.3360 us/op
+WorkloadPilot    4: 128 op, 49253776.00 ns, 384.7951 us/op
+WorkloadPilot    5: 256 op, 95073946.00 ns, 371.3826 us/op
+WorkloadPilot    6: 512 op, 184295898.00 ns, 359.9529 us/op
+WorkloadPilot    7: 1024 op, 364723945.00 ns, 356.1757 us/op
+WorkloadPilot    8: 2048 op, 751745250.00 ns, 367.0631 us/op
+
+OverheadWarmup   1: 2048 op, 13275.00 ns, 6.4819 ns/op
+OverheadWarmup   2: 2048 op, 10058.00 ns, 4.9111 ns/op
+OverheadWarmup   3: 2048 op, 10069.00 ns, 4.9165 ns/op
+OverheadWarmup   4: 2048 op, 10049.00 ns, 4.9067 ns/op
+OverheadWarmup   5: 2048 op, 10149.00 ns, 4.9556 ns/op
+OverheadWarmup   6: 2048 op, 10299.00 ns, 5.0288 ns/op
+OverheadWarmup   7: 2048 op, 10079.00 ns, 4.9214 ns/op
+
+OverheadActual   1: 2048 op, 10210.00 ns, 4.9854 ns/op
+OverheadActual   2: 2048 op, 10300.00 ns, 5.0293 ns/op
+OverheadActual   3: 2048 op, 10500.00 ns, 5.1270 ns/op
+OverheadActual   4: 2048 op, 10139.00 ns, 4.9507 ns/op
+OverheadActual   5: 2048 op, 10099.00 ns, 4.9312 ns/op
+OverheadActual   6: 2048 op, 79870.00 ns, 38.9990 ns/op
+OverheadActual   7: 2048 op, 10640.00 ns, 5.1953 ns/op
+OverheadActual   8: 2048 op, 10059.00 ns, 4.9116 ns/op
+OverheadActual   9: 2048 op, 10069.00 ns, 4.9165 ns/op
+OverheadActual  10: 2048 op, 10019.00 ns, 4.8921 ns/op
+OverheadActual  11: 2048 op, 9998.00 ns, 4.8818 ns/op
+OverheadActual  12: 2048 op, 10159.00 ns, 4.9604 ns/op
+OverheadActual  13: 2048 op, 10831.00 ns, 5.2886 ns/op
+OverheadActual  14: 2048 op, 10269.00 ns, 5.0142 ns/op
+OverheadActual  15: 2048 op, 10169.00 ns, 4.9653 ns/op
+
+WorkloadWarmup   1: 2048 op, 749324608.00 ns, 365.8812 us/op
+WorkloadWarmup   2: 2048 op, 748676684.00 ns, 365.5648 us/op
+WorkloadWarmup   3: 2048 op, 760059296.00 ns, 371.1227 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 2048 op, 746128780.00 ns, 364.3207 us/op
+WorkloadActual   2: 2048 op, 753938925.00 ns, 368.1342 us/op
+WorkloadActual   3: 2048 op, 761813462.00 ns, 371.9792 us/op
+WorkloadActual   4: 2048 op, 744642514.00 ns, 363.5950 us/op
+WorkloadActual   5: 2048 op, 752165712.00 ns, 367.2684 us/op
+WorkloadActual   6: 2048 op, 745394458.00 ns, 363.9621 us/op
+WorkloadActual   7: 2048 op, 749571620.00 ns, 366.0018 us/op
+WorkloadActual   8: 2048 op, 746068657.00 ns, 364.2913 us/op
+WorkloadActual   9: 2048 op, 738716038.00 ns, 360.7012 us/op
+WorkloadActual  10: 2048 op, 742432473.00 ns, 362.5159 us/op
+
+// AfterActualRun
+WorkloadResult   1: 2048 op, 746118611.00 ns, 364.3157 us/op
+WorkloadResult   2: 2048 op, 753928756.00 ns, 368.1293 us/op
+WorkloadResult   3: 2048 op, 744632345.00 ns, 363.5900 us/op
+WorkloadResult   4: 2048 op, 752155543.00 ns, 367.2634 us/op
+WorkloadResult   5: 2048 op, 745384289.00 ns, 363.9572 us/op
+WorkloadResult   6: 2048 op, 749561451.00 ns, 365.9968 us/op
+WorkloadResult   7: 2048 op, 746058488.00 ns, 364.2864 us/op
+WorkloadResult   8: 2048 op, 738705869.00 ns, 360.6962 us/op
+WorkloadResult   9: 2048 op, 742422304.00 ns, 362.5109 us/op
+// GC:  167 135 0 983334912 2048
+// Threading:  0 0 2048
+
+// AfterAll
+// Benchmark Process 1598 has exited with code 0.
+
+Mean = 364.527 μs, StdErr = 0.770 μs (0.21%), N = 9, StdDev = 2.309 μs
+Min = 360.696 μs, Q1 = 363.590 μs, Median = 364.286 μs, Q3 = 365.997 μs, Max = 368.129 μs
+IQR = 2.407 μs, LowerFence = 359.980 μs, UpperFence = 369.607 μs
+ConfidenceInterval = [360.646 μs; 368.408 μs] (CI 99.9%), Margin = 3.881 μs (1.06% of Mean)
+Skewness = 0.04, Kurtosis = 1.8, MValue = 2
+
+// ** Remained 0 (0.0 %) benchmark(s) to run. Estimated finish 2026-04-16 0:00 (0h 0m from now) **
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts/results/SerializerTests.Benchmarks.ListSerializerBenchmarks-report.csv
+  BenchmarkDotNet.Artifacts/results/SerializerTests.Benchmarks.ListSerializerBenchmarks-report-github.md
+  BenchmarkDotNet.Artifacts/results/SerializerTests.Benchmarks.ListSerializerBenchmarks-report.html
+
+// * Detailed results *
+ListSerializerBenchmarks.Serialize: Job-YFEFPZ(IterationCount=10, WarmupCount=3) [ListSize=10000, SerializerType=IvanImplementation]
+Runtime = .NET 8.0.25 (8.0.25, 8.0.2526.11203), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 1.452 ms, StdErr = 0.006 ms (0.45%), N = 10, StdDev = 0.020 ms
+Min = 1.428 ms, Q1 = 1.437 ms, Median = 1.448 ms, Q3 = 1.463 ms, Max = 1.497 ms
+IQR = 0.026 ms, LowerFence = 1.398 ms, UpperFence = 1.503 ms
+ConfidenceInterval = [1.421 ms; 1.483 ms] (CI 99.9%), Margin = 0.031 ms (2.13% of Mean)
+Skewness = 0.75, Kurtosis = 2.54, MValue = 2
+-------------------- Histogram --------------------
+[1.425 ms ; 1.478 ms) | @@@@@@@@@
+[1.478 ms ; 1.509 ms) | @
+---------------------------------------------------
+
+ListSerializerBenchmarks.Deserialize: Job-YFEFPZ(IterationCount=10, WarmupCount=3) [ListSize=10000, SerializerType=IvanImplementation]
+Runtime = .NET 8.0.25 (8.0.25, 8.0.2526.11203), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 2.577 ms, StdErr = 0.024 ms (0.94%), N = 10, StdDev = 0.077 ms
+Min = 2.465 ms, Q1 = 2.508 ms, Median = 2.598 ms, Q3 = 2.609 ms, Max = 2.698 ms
+IQR = 0.102 ms, LowerFence = 2.355 ms, UpperFence = 2.761 ms
+ConfidenceInterval = [2.462 ms; 2.693 ms] (CI 99.9%), Margin = 0.116 ms (4.49% of Mean)
+Skewness = -0.14, Kurtosis = 1.6, MValue = 2
+-------------------- Histogram --------------------
+[2.429 ms ; 2.522 ms) | @@@
+[2.522 ms ; 2.660 ms) | @@@@@@
+[2.660 ms ; 2.744 ms) | @
+---------------------------------------------------
+
+ListSerializerBenchmarks.DeepCopy: Job-YFEFPZ(IterationCount=10, WarmupCount=3) [ListSize=10000, SerializerType=IvanImplementation]
+Runtime = .NET 8.0.25 (8.0.25, 8.0.2526.11203), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 364.527 μs, StdErr = 0.770 μs (0.21%), N = 9, StdDev = 2.309 μs
+Min = 360.696 μs, Q1 = 363.590 μs, Median = 364.286 μs, Q3 = 365.997 μs, Max = 368.129 μs
+IQR = 2.407 μs, LowerFence = 359.980 μs, UpperFence = 369.607 μs
+ConfidenceInterval = [360.646 μs; 368.408 μs] (CI 99.9%), Margin = 3.881 μs (1.06% of Mean)
+Skewness = 0.04, Kurtosis = 1.8, MValue = 2
+-------------------- Histogram --------------------
+[359.779 μs ; 369.587 μs) | @@@@@@@@@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet v0.15.8, Linux Ubuntu 24.04.4 LTS (Noble Numbat)
+AMD Ryzen 7 2700 3.19GHz, 1 CPU, 16 logical and 8 physical cores
+.NET SDK 8.0.125
+  [Host]     : .NET 8.0.25 (8.0.25, 8.0.2526.11203), X64 RyuJIT x86-64-v3
+  Job-YFEFPZ : .NET 8.0.25 (8.0.25, 8.0.2526.11203), X64 RyuJIT x86-64-v3
+
+IterationCount=10  WarmupCount=3  
+
+| Method      | ListSize | SerializerType     | Mean       | Error     | StdDev   | Gen0     | Gen1     | Gen2     | Allocated  |
+|------------ |--------- |------------------- |-----------:|----------:|---------:|---------:|---------:|---------:|-----------:|
+| Serialize   | 10000    | IvanImplementation | 1,452.4 μs |  30.98 μs | 20.49 μs | 250.0000 | 250.0000 | 250.0000 | 1176.17 KB |
+| Deserialize | 10000    | IvanImplementation | 2,577.3 μs | 115.76 μs | 76.57 μs | 191.4063 | 140.6250 |  46.8750 | 1117.78 KB |
+| DeepCopy    | 10000    | IvanImplementation |   364.5 μs |   3.88 μs |  2.31 μs |  81.5430 |  65.9180 |        - |  468.89 KB |
+
+// * Hints *
+Outliers
+  ListSerializerBenchmarks.DeepCopy: IterationCount=10, WarmupCount=3 -> 1 outlier  was  removed (371.98 μs)
+
+// * Legends *
+  ListSize       : Value of the 'ListSize' parameter
+  SerializerType : Value of the 'SerializerType' parameter
+  Mean           : Arithmetic mean of all measurements
+  Error          : Half of 99.9% confidence interval
+  StdDev         : Standard deviation of all measurements
+  Gen0           : GC Generation 0 collects per 1000 operations
+  Gen1           : GC Generation 1 collects per 1000 operations
+  Gen2           : GC Generation 2 collects per 1000 operations
+  Allocated      : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+  1 μs           : 1 Microsecond (0.000001 sec)
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:00:36 (36.62 sec), executed benchmarks: 3
+
+Global total time: 00:00:52 (52.29 sec), executed benchmarks: 3
+// * Artifacts cleanup *
+Artifacts cleanup is finished
